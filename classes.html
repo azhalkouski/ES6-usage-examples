@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ES6 Classes</title>
+  </head>
+  <body>
+    <script>
+      class Vehicle {
+        constructor(description, wheels) {
+          this.description = description;
+          this.wheels = wheels;
+        }
+
+        describeYourself() {
+          console.log(`I am a ${this.description} with ${this.wheels} wheels`);
+        }
+      }
+
+      const coolSkiVan = new Vehicle("cool ski van", 4);
+
+      coolSkiVan.describeYourself();
+
+      class SemiTruck extends Vehicle {
+        constructor() {
+          super("semi truck", 18)
+        }
+      }
+
+      const groceryStoreSemi = new SemiTruck();
+      groceryStoreSemi.describeYourself();
+    </script>
+  </body>
+</html>
