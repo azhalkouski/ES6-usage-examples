@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
     <title>Loading Data with Fetch</title>
-    <script type="text/babel">
+  </head>
+  <body>
+    <script>
       const getPeopleInSpace = () =>
         fetch('http://api.open-notify.org/astros.json')
           .then(res => res.json());
@@ -17,7 +18,5 @@
       spaceNames()
         .then(console.log);
     </script>
-  </head>
-  <body>
   </body>
 </html>
